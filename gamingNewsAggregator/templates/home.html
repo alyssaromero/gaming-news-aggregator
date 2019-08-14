@@ -12,9 +12,6 @@
   </div>
 
   <div class="title-container">
-    <div class="gamasutra-title">
-      <h2>Gamasutra</h2>
-    </div>
     <div class="gameInfomer-title">
       <h2>Game Informer</h2>
     </div>
@@ -25,17 +22,7 @@
       <h2>Polygon</h2>
     </div>
   </div>
-
   <div class="article-container">
-    <div class="gamasutra-articles">
-      {% for article in gamasutra %}
-        {% for i in range(len) %}
-        <div class="article">
-          <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
-        </div>
-        {% endfor %}
-      {% endfor %}
-    </div>
     <div class="gameInfomer-articles">
       {% for article in gameInformer %}
         {% for i in range(len) %}
@@ -63,7 +50,7 @@
         {% endfor %}
       {% endfor %}
     </div>
-  </div>
+  </div>-->
   <footer>
     <h4 class="copyright"> @Copyright2019 Alyssa Romero</h4>
     <h4 class="connect-with-me">  CONNECT WITH ME! -------------> </h4>
