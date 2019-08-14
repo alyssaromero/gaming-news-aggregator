@@ -1,0 +1,149 @@
+ html {
+  height: 100%;
+}
+
+.title {
+  width: 90%;
+  background: gray;
+  margin-left: 5%;
+  text-align: center;
+  border-bottom: black 2px solid;
+  border-left: black 2px solid;
+  border-right: black 2px solid;
+}
+
+.title-container {
+  padding-top: 5%;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.article-container {
+  padding-top: 2.5%;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.gamasutra-title {
+  text-align: center;
+  width: 20%;
+  display: inline-block;
+  border: 2px black solid;
+  margin-left: 7.5%;
+  background: darkgray;
+}
+
+    .gamasutra-articles {
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+      margin-left: 7.5%;
+      vertical-align: top;
+    }
+
+.gameInfomer-title {
+  text-align: center;
+  width: 20%;
+  display: inline-block;
+  border: 2px black solid;
+  background: darkgray;
+}
+
+    .gameInfomer-articles {
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+.gamesRadar-title {
+  text-align: center;
+  width: 20%;
+  display: inline-block;
+  border: 2px black solid;
+  background: darkgray;
+}
+
+    .gamesRadar-articles {
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+.polygon-title {
+  text-align: center;
+  width: 20%;
+  display: inline-block;
+  border: 2px black solid;
+  background: darkgray;
+}
+
+    .polygon-articles {
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+.article {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 2.5%;
+  margin-bottom: 5%;
+  background: darkgray;
+  height: 200px;
+  text-transform: capitalize;
+  /*text-transform: uppercase;*/
+}
+
+.article a {
+  color: black;
+  text-decoration: none;
+}
+
+.article a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  background: gray;
+  overflow: auto;
+  border-top: 2px solid black;
+}
+
+    footer h4 {
+      display: inline-block;
+      float: left;
+      width: 30%;
+      text-align: center;
+      margin-top: 1%;
+    }
+
+    footer ul {
+      width: 40%;
+      float: right;
+      text-align: center;
+      margin-top: 1%;
+    }
+
+    footer ul li {
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      width: 12%;
+      text-align: center;
+    }
+
+        footer li a {
+          text-decoration: none;
+          color: black;
+          text-align: center;
+        }
+
+        footer li a:hover {
+          color: white;
+          text-decoration: none;
+        }

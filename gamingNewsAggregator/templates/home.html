@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div class="title">
+    <h1>Gaming News Aggregator</h1>
+  </div>
+
+  <div class="title-container">
+    <div class="gamasutra-title">
+      <h2>Gamasutra</h2>
+    </div>
+    <div class="gameInfomer-title">
+      <h2>Game Informer</h2>
+    </div>
+    <div class="gamesRadar-title">
+      <h2>Games Radar</h2>
+    </div>
+    <div class="polygon-title">
+      <h2>Polygon</h2>
+    </div>
+  </div>
+
+  <div class="article-container">
+    <div class="gamasutra-articles">
+      {% for article in gamasutra %}
+        {% for i in range(len) %}
+        <div class="article">
+          <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+        </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="gameInfomer-articles">
+      {% for article in gameInformer %}
+        {% for i in range(len) %}
+        <div class="article">
+          <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+        </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="gamesRadar-articles">
+      {% for article in gamesRadar %}
+        {% for i in range(len) %}
+        <div class="article">
+          <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+        </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="polygon-articles">
+      {% for article in polygon %}
+        {% for i in range(len) %}
+        <div class="article">
+          <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+        </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+  <footer>
+    <h4 class="copyright"> @Copyright2019 Alyssa Romero</h4>
+    <h4 class="connect-with-me">  CONNECT WITH ME! -------------> </h4>
+    <ul>
+      <li><a href="#">Github</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Email</a></li>
+      <li><a href="#">Location</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
