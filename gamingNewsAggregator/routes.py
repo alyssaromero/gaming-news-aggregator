@@ -8,7 +8,6 @@ from os import listdir
 
 app = Flask(__name__)
 
-
 @app.route('/')
 @app.route('/home')
 def home():
@@ -30,14 +29,14 @@ def home():
     for s in spiders:
         subprocess.check_output(['scrapy', 'crawl', s, '-o', 'spiders/spider_files/'+s+'.json'])
     """
-
     ### Base Case ... First Run ... Files DNE ###
     if (len(os.listdir("spiders/spider_files")) == 0):
         utc_now = pytz.utc.localize(datetime.datetime.utcnow())
         data = {}
         data["utc_old"] = []
         data["utc_old"].append(
-            {'Day': utc_now.day,
+            {'FullTime': utc_now,
+             'Day': utc_now.day,
              'Month': utc_now.month,
              'Year': utc_now.year,
              'Hour': utc_now.hour,
@@ -55,9 +54,31 @@ def home():
         utc_now = pytz.utc.localize(datetime.datetime.utcnow())
         with open("spiders/spider_files/time.json") as json_file:
             jsontime = json.load(json_file)
-            
+            hour = jsontime['utc_old'][0]['Hour']
+            if (utc_now.hour - hour >= 5):
+                spiders = ['gamasutra', 'gameInformer', 'gamesRadar', 'polygon']
+                ## Remove Previous JSON files and Update ##
+                for s in spiders:
+                    os.remove('spiders/' + s + '.json')
+                for s in spiders:
+                    subprocess.check_output(['scrapy', 'crawl', s, '-o', 'spiders/spider_files/'+s+'.json'])
+                os.remove('spiders/time.json')
 
-
+                ## Edit the Timestamp for JSON file uploads ##
+                data = {}
+                data["utc_old"] = []
+                data["utc_old"].append(
+                    {'FullTime': utc_now,
+                     'Day': utc_now.day,
+                     'Month': utc_now.month,
+                     'Year': utc_now.year,
+                     'Hour': utc_now.hour,
+                     'Minute': utc_now.minute,
+                     'Second': utc_now.second
+                     }
+                )
+                with open("spiders/spider_files/time.json", "w") as file:
+                    json.dump(data, file)
 
     #os.remove("spiders/gamesRadar.json") #to remove json file...this works
     """
