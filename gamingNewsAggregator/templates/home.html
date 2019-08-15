@@ -27,9 +27,17 @@
     <div class="gameInfomer-articles">
       {% for article in gameInformer %}
         {% for i in range(len) %}
-        <div class="article">
-          <div class="header">
-            <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+        <div class="article-specs">
+          <div class="image-ghost">
+            <div class="image">
+              <img style="border: 5px orange solid;" height="150" width="225" src="{{article[i]['image']}}" alt="Article Image">
+            </div>
+          </div>
+          <div class="header-ghost">
+            <div class="header">
+              <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+              <h6> by {{article[i]['author']}}</h6>
+            </div>
           </div>
         </div>
         {% endfor %}
@@ -38,9 +46,17 @@
     <div class="gamesRadar-articles">
       {% for article in gamesRadar %}
         {% for i in range(len) %}
-        <div class="article">
-          <div class="header">
-            <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+        <div class="article-specs">
+          <div class="image-ghost">
+            <div class="image">
+              <img style="border: 5px orange solid;" height="150" width="225" src="{{article[i]['image']}}" alt="Article Image">
+            </div>
+          </div>
+          <div class="header-ghost">
+            <div class="header">
+              <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+              <h6> by {{article[i]['author']}}</h6>
+            </div>
           </div>
         </div>
         {% endfor %}
@@ -49,9 +65,17 @@
     <div class="polygon-articles">
       {% for article in polygon %}
         {% for i in range(len) %}
-        <div class="article">
-          <div class="header">
-            <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+        <div class="article-specs">
+          <div class="image-ghost">
+            <div class="image">
+              <img style="border: 5px orange solid;" height="150" width="225" src="{{article[i]['image']}}" alt="Article Image">
+            </div>
+          </div>
+          <div class="header-ghost">
+            <div class="header">
+              <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
+              <h6> by {{article[i]['author']}}</h6>
+            </div>
           </div>
         </div>
         {% endfor %}
