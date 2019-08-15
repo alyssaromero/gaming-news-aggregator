@@ -9,11 +9,11 @@ class gameInformer(scrapy.Spider):
 
     def parse(self, response):
 
-        articles = response.xpath('//div[@class="views-infinite-scroll-content-wrapper clearfix"]/div')
+        articles = a
 
         for art in articles:
             yield {
                 'headline': art.css("span::text").get(),
-                'link': "https://www.gameinformer.com" + art.xpath("//div[@class='promo-img-thumb']").css("a::attr(href)").get()
-                #'image': art.css("img::attr(src)").get()
+                'link': "https://www.gameinformer.com" + art.xpath("//div[@class='promo-img-thumb']").css("a::attr(href)").get(),
+                'image': art.css("img::attr(src)").get()
             }

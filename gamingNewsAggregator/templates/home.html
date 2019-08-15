@@ -27,6 +27,9 @@
       {% for article in gameInformer %}
         {% for i in range(len) %}
         <div class="article">
+          <div class="">
+            <img src="{{url_for('static', filename='gameInfomer.jpg')}}" alt="Game Informer Picture" style="width: 20%; height: 20%">
+          </div>
           <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
         </div>
         {% endfor %}
@@ -36,6 +39,9 @@
       {% for article in gamesRadar %}
         {% for i in range(len) %}
         <div class="article">
+          <div class="">
+            <img src="{{url_for('static', filename='gamesRadar.jpg')}}" alt="Game Informer Picture" style="width: 30%; height: 15%">
+          </div>
           <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
         </div>
         {% endfor %}
@@ -45,6 +51,9 @@
       {% for article in polygon %}
         {% for i in range(len) %}
         <div class="article">
+          <div class="">
+            <img src="{{url_for('static', filename='polygon.jpg')}}" alt="Game Informer Picture" style="width: 20%; height: 20%">
+          </div>
           <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
         </div>
         {% endfor %}
