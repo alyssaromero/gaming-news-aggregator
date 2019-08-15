@@ -2,13 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
   <div class="title">
-    <h1>Gaming News Aggregator</h1>
+    <h1><b>Gaming News Aggregator</b></h1>
   </div>
 
   <div class="title-container">
@@ -27,10 +28,9 @@
       {% for article in gameInformer %}
         {% for i in range(len) %}
         <div class="article">
-          <div class="">
-            <img src="{{url_for('static', filename='gameInfomer.jpg')}}" alt="Game Informer Picture" style="width: 20%; height: 20%">
+          <div class="header">
+            <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
           </div>
-          <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
         </div>
         {% endfor %}
       {% endfor %}
@@ -39,10 +39,9 @@
       {% for article in gamesRadar %}
         {% for i in range(len) %}
         <div class="article">
-          <div class="">
-            <img src="{{url_for('static', filename='gamesRadar.jpg')}}" alt="Game Informer Picture" style="width: 30%; height: 15%">
+          <div class="header">
+            <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
           </div>
-          <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
         </div>
         {% endfor %}
       {% endfor %}
@@ -51,19 +50,17 @@
       {% for article in polygon %}
         {% for i in range(len) %}
         <div class="article">
-          <div class="">
-            <img src="{{url_for('static', filename='polygon.jpg')}}" alt="Game Informer Picture" style="width: 20%; height: 20%">
+          <div class="header">
+            <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
           </div>
-          <h4><a href="{{article[i]['link']}}">{{article[i]['headline']}}</a></h4>
         </div>
         {% endfor %}
       {% endfor %}
     </div>
-  </div>-->
+  </div>
   <footer>
-    <h4 class="copyright"> @Copyright2019 Alyssa Romero</h4>
-    <h4 class="connect-with-me">  CONNECT WITH ME! -------------> </h4>
-    <ul>
+    <p class="copyright"> @Copyright2019 Alyssa Romero</p>
+    <ul class="contacts">
       <li><a href="#">Github</a></li>
       <li><a href="#">LinkedIn</a></li>
       <li><a href="#">Email</a></li>

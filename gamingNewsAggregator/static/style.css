@@ -4,6 +4,7 @@
 
 .title {
   width: 90%;
+  font-family: 'Slabo 27px', serif;
   background: gray;
   margin-left: 5%;
   text-align: center;
@@ -28,11 +29,12 @@
 
 .gamasutra-title {
   text-align: center;
+  font-family: 'Slabo 27px', serif;
   width: 20%;
   display: inline-block;
   border: 2px black solid;
   margin-left: 7.5%;
-  background: darkgray;
+  background: orange;
 }
 
     .gamasutra-articles {
@@ -45,10 +47,11 @@
 
 .gameInfomer-title {
   text-align: center;
+  font-family: 'Slabo 27px', serif;
   width: 20%;
   display: inline-block;
   border: 2px black solid;
-  background: darkgray;
+  background: orange;
 }
 
     .gameInfomer-articles {
@@ -60,10 +63,11 @@
 
 .gamesRadar-title {
   text-align: center;
+  font-family: 'Slabo 27px', serif;
   width: 20%;
   display: inline-block;
   border: 2px black solid;
-  background: darkgray;
+  background: orange;
 }
 
     .gamesRadar-articles {
@@ -75,10 +79,11 @@
 
 .polygon-title {
   text-align: center;
+  font-family: 'Slabo 27px', serif;
   width: 20%;
   display: inline-block;
   border: 2px black solid;
-  background: darkgray;
+  background: orange;
 }
 
     .polygon-articles {
@@ -96,7 +101,14 @@
   background: darkgray;
   height: 200px;
   text-transform: capitalize;
-  /*text-transform: uppercase;*/
+  display: table;
+}
+
+.header {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Slabo 27px', serif;
 }
 
 .article a {
@@ -116,12 +128,13 @@ footer {
   border-top: 2px solid black;
 }
 
-    footer h4 {
+    footer p {
       display: inline-block;
       float: left;
       width: 30%;
       text-align: center;
       margin-top: 1%;
+      color: black;
     }
 
     footer ul {
@@ -137,6 +150,8 @@ footer {
       text-align: center;
       width: 12%;
       text-align: center;
+      border: black 2px solid;
+      background: orange;
     }
 
         footer li a {
