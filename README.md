@@ -30,11 +30,9 @@ the twenty most recent articles posted on the site have been scraped and are dis
 
 ## TO-DO LIST
 <ul>
-  <li>Debug Various Spiders</li>
-  <li>Add Images to Articles</li>
-  <li>Implement Scheduler</li>
-  <li>Fine Tune UI Design</li>
-  <li>Finalize Footer Design</li>
+  <li>Spider Authors Not Working Correctly</li>
+  <li>Bad Quality Game Informer Images</li>
+  <li>Polygon Images Encoded in Base64</li>
 </ul>
 
 ## Author
