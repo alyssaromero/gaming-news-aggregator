@@ -30,7 +30,7 @@
         <div class="article-specs">
           <div class="image-ghost">
             <div class="image">
-              <img style="border: 5px orange solid;" height="150" width="225" src="{{article[i]['image']}}" alt="Article Image">
+              <img style="border: 5px orange solid" height="150" width="225" src="{{article[i]['image']}}">
             </div>
           </div>
           <div class="header-ghost">
@@ -49,7 +49,7 @@
         <div class="article-specs">
           <div class="image-ghost">
             <div class="image">
-              <img style="border: 5px orange solid;" height="150" width="225" src="{{article[i]['image']}}" alt="Article Image">
+              <img style="border: 5px orange solid;" height="150" width="250" src="{{article[i]['image']}}" alt="Article Image">
             </div>
           </div>
           <div class="header-ghost">
@@ -67,8 +67,9 @@
         {% for i in range(len) %}
         <div class="article-specs">
           <div class="image-ghost">
-            <div class="image">
-              <img style="border: 5px orange solid;" height="150" width="225" src="{{article[i]['image']}}" alt="Article Image">
+            <div class="image" style="border: none;">
+              <img height="150" width="250" src="{{url_for('static', filename='polygon.jpg.png')}}" alt="">
+              <!--<img style="border: 5px orange solid;" height="150" width="250" src="{{article[i]['image']}}" alt="Article Image">-->
             </div>
           </div>
           <div class="header-ghost">

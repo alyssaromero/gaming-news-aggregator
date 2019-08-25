@@ -43,6 +43,7 @@ def home():
             hour = jsontime['utc_old'][0]['Hour']
             if (utc_now.hour - hour >= 5):
                 spiders = ['gameInformer', 'gamesRadar', 'polygon']
+
                 ## Remove Previous JSON files and Update ##
                 for s in spiders:
                     os.remove('spiders/' + s + '.json')
@@ -66,8 +67,6 @@ def home():
                 with open("spiders/spider_files/time.json", "w") as file:
                     json.dump(data, file)
 
-    #os.remove("spiders/gamesRadar.json") #to remove json file...this works
-
     gameInformer = []
     with open('spiders/spider_files/gameInformer.json') as json_file:
         data = json.load(json_file)
@@ -82,7 +81,6 @@ def home():
         polygon.append(data)
 
     return render_template("home.html", gameInformer=gameInformer, gamesRadar=gamesRadar, polygon=polygon, len=20)
-    #return render_template("index.html", utc_now=utc_now, time=jsontime, hour=jsonhour)
 
 if __name__ == "__main__":
     app.run(debug=True)
