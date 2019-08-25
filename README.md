@@ -20,20 +20,24 @@ the twenty most recent articles posted on the site have been scraped and are dis
   <li>Scrapy Framework</li>
 </ul>
 
-## Screenshots
-
-## Requirements
-
-## Installation
+## Screenshot
+![Current State of Web App](gamingNewsAggregator/static/screenshot1.png "Current State of Web App")
 
 ## Running
 
-## TO-DO LIST
+```
+$ cd gamingNewsAggregator
+$ python3 routes.py
+```
+
+## Future Improvements
 <ul>
-  <li>Spider Authors Not Working Correctly</li>
-  <li>Bad Quality Game Informer Images</li>
+  <li>Improve GameInformer Image Quality</li>
   <li>Polygon Images Encoded in Base64</li>
+  <li>Fix the Authors</li>
+  <li>Make CSS Responsive</li>
 </ul>
 
 ## Author
-Alyssa Romero (August 2019)
+Alyssa Romero <br>
+Last Updated: 25 Aug 2019
